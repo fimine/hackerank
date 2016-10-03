@@ -13,6 +13,7 @@ namespace HackerankCodingInterview
 			//ArrayRotation(args);
 			Challanges.Ngram.NgramDotNet();
 			Challanges.Ngram.NgramStringBased();
+			Challanges.HashTables.RansomNote();
 			Console.ReadLine();
 		}
 
