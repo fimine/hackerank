@@ -16,6 +16,24 @@ namespace HackerankCodingInterview.Challanges
 				string expression = Console.ReadLine();
 			}
 
+			
+		}
+
+		static string IsBalanced(string message)
+		{
+			var s = new Stack<char>[3];
+			
+			var lefts = new List<string> { "{", "[", "(" };
+			var rights = new string[] { "}", "]", ")" };
+
+			foreach (var s in message)
+			{
+				if(lefts.Contains(s))
+				{
+					stackMessage.Push()
+				}
+			}
+			return "";
 		}
 
 
