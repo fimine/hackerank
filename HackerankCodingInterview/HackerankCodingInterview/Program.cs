@@ -14,6 +14,7 @@ namespace HackerankCodingInterview
 			Challanges.Ngram.NgramDotNet();
 			Challanges.Ngram.NgramStringBased();
 			Challanges.HashTables.RansomNote();
+			Challanges.Stacks.BalancedBrackets(args);
 			Console.ReadLine();
 		}
 

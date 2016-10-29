@@ -8,35 +8,49 @@ namespace HackerankCodingInterview.Challanges
 {
 	public static class Stacks
 	{
-		static void BalancedBrackets(String[] args)
+
+		private const int bracketPairs = 3;
+
+		public static void BalancedBrackets(String[] args)
 		{
 			int t = Convert.ToInt32(Console.ReadLine());
 			for (int a0 = 0; a0 < t; a0++)
 			{
 				string expression = Console.ReadLine();
+				Console.WriteLine(IsBalanced(expression) ? "YES" : "NO");
 			}
-
-			
 		}
 
-		static string IsBalanced(string message)
+		static bool IsBalanced(string message)
 		{
-			var s = new Stack<char>[3];
+			var s = new Stack<char>();
 			
-			var lefts = new List<string> { "{", "[", "(" };
-			var rights = new string[] { "}", "]", ")" };
+			var pairs = new char[,] {
+				{'}', '{' }
+				, {']', '[' }
+				, {')', '('}
+			};
 
-			foreach (var s in message)
+			foreach (var c in message)
 			{
-				if(lefts.Contains(s))
+				for (var i = 0; i < bracketPairs; i++)
 				{
-					stackMessage.Push()
+					if (pairs[i, 1] == c)
+					{
+						s.Push(c);
+					}
+					else if(pairs[i,0] == c)
+					{
+						if (!s.Any()) return false;
+						var last = s.Pop();
+						if (last != pairs[i, 1]) return false;
+
+					}
 				}
 			}
-			return "";
+
+			return !s.Any();
 		}
-
-
 
 	}
 }
