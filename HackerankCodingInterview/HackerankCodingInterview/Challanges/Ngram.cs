@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HackerankCodingInterview.Challanges
 {
@@ -18,7 +15,6 @@ namespace HackerankCodingInterview.Challanges
 			var cnt = a.Concat(b).Count(p => !inter.Contains(p)) + diffMatch;
 
 			Console.Write(cnt);
-
 		}
 
 		public static void NgramStringBased()

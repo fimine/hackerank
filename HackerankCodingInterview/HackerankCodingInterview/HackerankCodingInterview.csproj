@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Challanges\Algorythms.cs" />
     <Compile Include="Challanges\ArrayRotation.cs" />
     <Compile Include="Challanges\HashTables.cs" />
     <Compile Include="Challanges\Ngram.cs" />
