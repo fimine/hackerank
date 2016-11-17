@@ -48,6 +48,7 @@
     <Compile Include="Challanges\HashTables.cs" />
     <Compile Include="Challanges\Ngram.cs" />
     <Compile Include="Challanges\Stacks.cs" />
+    <Compile Include="DB\Db_misc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

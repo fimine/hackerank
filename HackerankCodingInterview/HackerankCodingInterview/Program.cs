@@ -10,12 +10,14 @@ namespace HackerankCodingInterview
 	{
 		static void Main(string[] args)
 		{
-			//ArrayRotation(args);
-			//Challanges.Ngram.NgramDotNet();
-			//Challanges.Ngram.NgramStringBased();
-			//Challanges.HashTables.RansomNote();
-			//Challanges.Stacks.BalancedBrackets(args);
-			Challanges.Algorythms.CountingInversions(args);
+            //ArrayRotation(args);
+            //Challanges.Ngram.NgramDotNet();
+            //Challanges.Ngram.NgramStringBased();
+            //Challanges.HashTables.RansomNote();
+            //Challanges.Stacks.BalancedBrackets(args);
+            //	Challanges.Algorythms.CountingInversions(args);
+
+            DB.Db_misc.test1();
 
 			Console.ReadLine();
 		}
