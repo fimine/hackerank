@@ -25,7 +25,7 @@ namespace HackerankCodingInterview.Challanges
 				int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
 				var arrTemp = new int[arr.Length];
 
-				MergeSort(arr, arrTemp, 0, arr.Length - 1);
+				c = MergeSort(arr, arrTemp, 0, arr.Length - 1);
 				Console.WriteLine(c);
 				
 			}
@@ -34,41 +34,45 @@ namespace HackerankCodingInterview.Challanges
 
 		}
 
-		private static void MergeSort(int[] arr, int[] arrTemp, int start, int end)
+		private static int MergeSort(int[] arr, int[] arrTemp, int start, int end)
 		{
 			if (start >= end)
-				return;
-
+				return 0;
+			var count = 0;
 			int mid = start / 2 + end / 2;
+		
+			count += MergeSort(arr, arrTemp, start, mid);
+			count += MergeSort(arr, arrTemp, mid + 1, end);
+			count += MergeHalves(arr, arrTemp, start, end);
 
-			MergeSort(arr, arrTemp, start, mid);
-			MergeSort(arr, arrTemp, mid + 1, end);
-			MergeHalves(arr, arrTemp, start, end);
+			return count;
 
 		}
 
-		private static void MergeHalves(int[] arr, int[] arrTemp, int left, int end)
+		private static int MergeHalves(int[] arr, int[] arrTemp, int left, int end)
 		{
 			int leftEnd = left/2 + end/2;
 			int right = leftEnd + 1;
 			int i = left;
 			int length = end - left + 1;
+			var count = 0;
 
 			while (left <= leftEnd && right <= end)
 			{
 				if (arr[left] > arr[right])
-				{
+				{count += leftEnd + 1 - right;
 					arrTemp[i] = arr[right];
 					left++;
-					c++;
+				
 
 				}
 				else
 				{
 					if (arr[left] < arr[right])
 					{
-						//c++;
+					
 						arrTemp[i] = arr[left];
+						
 					}
 
 					
@@ -81,6 +85,7 @@ namespace HackerankCodingInterview.Challanges
 			Array.Copy(arr, left, arrTemp, i,   leftEnd-left+1);
 			Array.Copy(arr, right, arrTemp, i, end - right + 1);
 			Array.Copy(arrTemp, arr, length);
+			return count;
 
 		}
 

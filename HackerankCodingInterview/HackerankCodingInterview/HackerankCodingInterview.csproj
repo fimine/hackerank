@@ -47,6 +47,7 @@
     <Compile Include="Challanges\ArrayRotation.cs" />
     <Compile Include="Challanges\HashTables.cs" />
     <Compile Include="Challanges\Ngram.cs" />
+    <Compile Include="Challanges\Sorting.cs" />
     <Compile Include="Challanges\Stacks.cs" />
     <Compile Include="DB\Db_misc.cs" />
     <Compile Include="Program.cs" />
