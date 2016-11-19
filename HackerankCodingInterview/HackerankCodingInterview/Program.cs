@@ -17,9 +17,9 @@ namespace HackerankCodingInterview
 			//Challanges.Ngram.NgramStringBased();
 			//Challanges.HashTables.RansomNote();
 			//Challanges.Stacks.BalancedBrackets(args);
-			//Challanges.Algorythms.CountingInversions(args);
-			Challanges.Algorythms.Fibonacci(args);
-
+			Challanges.Algorythms.CountingInversions(args);
+//Challanges.Algorythms.Fibonacci(args);
+  DB.Db_misc.test1();
 			Console.ReadLine();
 
 			Console.WriteLine()
