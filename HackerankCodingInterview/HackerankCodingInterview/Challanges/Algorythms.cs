@@ -10,7 +10,7 @@ namespace HackerankCodingInterview.Challanges
 	public static class Algorythms
 	{
 		static int c = 0;
-		
+
 		public static void CountingInversions(string[] args)
 		{
 
@@ -27,7 +27,7 @@ namespace HackerankCodingInterview.Challanges
 
 				c = MergeSort(arr, arrTemp, 0, arr.Length - 1);
 				Console.WriteLine(c);
-				
+
 			}
 
 
@@ -40,7 +40,7 @@ namespace HackerankCodingInterview.Challanges
 				return 0;
 			var count = 0;
 			int mid = start / 2 + end / 2;
-		
+
 			count += MergeSort(arr, arrTemp, start, mid);
 			count += MergeSort(arr, arrTemp, mid + 1, end);
 			count += MergeHalves(arr, arrTemp, start, end);
@@ -51,7 +51,7 @@ namespace HackerankCodingInterview.Challanges
 
 		private static int MergeHalves(int[] arr, int[] arrTemp, int left, int end)
 		{
-			int leftEnd = left/2 + end/2;
+			int leftEnd = left / 2 + end / 2;
 			int right = leftEnd + 1;
 			int i = left;
 			int length = end - left + 1;
@@ -60,34 +60,54 @@ namespace HackerankCodingInterview.Challanges
 			while (left <= leftEnd && right <= end)
 			{
 				if (arr[left] > arr[right])
-				{count += leftEnd + 1 - right;
+				{
+					count += leftEnd + 1 - right;
 					arrTemp[i] = arr[right];
 					left++;
-				
+
 
 				}
 				else
 				{
 					if (arr[left] < arr[right])
 					{
-					
-						arrTemp[i] = arr[left];
+
+
 						
+						arrTemp[i] = arr[left] ;
+
 					}
 
-					
-					right ++;
+
+					right++;
 
 				}
 				i++;
 			}
-			
-			Array.Copy(arr, left, arrTemp, i,   leftEnd-left+1);
+
+			Array.Copy(arr, left, arrTemp, i, leftEnd - left + 1);
 			Array.Copy(arr, right, arrTemp, i, end - right + 1);
 			Array.Copy(arrTemp, arr, length);
 			return count;
 
 		}
 
+		public static int Fibonacci(int n)
+		{
+			var result = 0;
+
+			if (n <= 1)
+				return n;
+			
+			result =+Fibonacci(n - 1) + Fibonacci(n - 2);
+			return result;
+		
+		}
+		
+		public static void Fibonacci(String[] args)
+		{
+			int n = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine(Fibonacci(n));
+		}
 	}
 }

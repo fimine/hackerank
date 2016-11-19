@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace HackerankCodingInterview
 {
+	
+
 	public static class Program
 	{
 		static void Main(string[] args)
@@ -15,9 +17,15 @@ namespace HackerankCodingInterview
 			//Challanges.Ngram.NgramStringBased();
 			//Challanges.HashTables.RansomNote();
 			//Challanges.Stacks.BalancedBrackets(args);
-			Challanges.Algorythms.CountingInversions(args);
+			//Challanges.Algorythms.CountingInversions(args);
+			Challanges.Algorythms.Fibonacci(args);
 
 			Console.ReadLine();
+
+			Console.WriteLine()
+
+
+
 		}
 
 		
